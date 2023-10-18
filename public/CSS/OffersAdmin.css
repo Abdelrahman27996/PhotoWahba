@@ -1,0 +1,12 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.centered-rectangle {
+    width: 50%; /* Adjust this value as needed */
+    text-align: center;
+    padding: 20px;
+}
