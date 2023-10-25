@@ -1,1 +1,1 @@
-index.use(express.static(path.join(__dirname, 'Public')));
+index.use(express.static(path.join(__dirname, 'public')));
