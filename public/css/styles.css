@@ -84,6 +84,8 @@ body {
 
 .card-img-actions {
     position: relative;
+    width: 350px;
+    width: 350px;
 }
 .card-body {
     -ms-flex: 1 1 auto;
@@ -94,7 +96,7 @@ body {
 
 .card-img{
 
-    width: 350px;
+    width:350px;
 }
 
 .star{
