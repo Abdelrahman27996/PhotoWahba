@@ -1,0 +1,129 @@
+
+.button-container {
+    display: flex;
+}
+
+.square-button {
+    width: 80px; /* Reduced width */
+    height: 80px; /* Reduced height */
+    margin: 10px;
+    text-align: center;
+    line-height: 80px; /* Adjusted line-height */
+    font-size: 14px; /* Reduced font size */
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
+
+.square-button:hover {
+    transform: scale(0.9); /* Zoom out on hover */
+}
+
+.red-button {
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
+}
+
+.blue-button {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+}
+
+.green-button {
+    background: linear-gradient(to bottom, #27ae60, #219f53);
+}
+
+.orange-button {
+    background: linear-gradient(to bottom, #e67e22, #d35400);
+}
+
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.5385;
+    color: #333;
+    text-align: left;
+    background-color: #2196F3;
+}
+
+.mt-50{
+
+    margin-top: 50px;
+}
+
+.mb-50{
+
+    margin-bottom: 50px;
+}
+
+
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .1875rem;
+}
+
+.card-img-actions {
+    position: relative;
+    width: 350px;
+    width: 350px;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.card-img{
+
+    width:350px;
+}
+
+.star{
+        color: red;
+}
+
+.bg-cart {
+    background-color:orange;
+    color:#fff;
+}
+
+.bg-cart:hover {
+    
+    color:#fff;
+}
+
+.bg-buy {
+    background-color:green;
+    color:#fff;
+    padding-right: 29px;
+}
+.bg-buy:hover {
+    
+    color:#fff;
+}
+
+a{
+
+    text-decoration: none !important;
+}
