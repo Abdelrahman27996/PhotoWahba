@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  .btn {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    white-space: nowrap;
+  }
+  .btn:hover {
+    filter: brightness(0.7);
+  }
+  .progress {
+    position: relative;
+    height: 2px;
+    display: block;
+    z-index: 9999;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    background-clip: padding-box; /*margin: 0.5rem 0 1rem 0;*/
+    overflow: hidden;
+  }
+  .progress .indeterminate {
+    background-color: black;
+  }
+  .progress .indeterminate:before {
+    content: "";
+    position: absolute;
+    background-color: #2c67b1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395)
+      infinite;
+    animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+  }
+  .progress .indeterminate:after {
+    content: "";
+    position: absolute;
+    background-color: #2c67b1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+      infinite;
+    animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1)
+      infinite;
+    -webkit-animation-delay: 1.15s;
+    animation-delay: 1.15s;
+  }
+  @-webkit-keyframes indeterminate {
+    0% {
+      left: -35%;
+      right: 100%;
+    }
+    60% {
+      left: 100%;
+      right: -90%;
+    }
+    100% {
+      left: 100%;
+      right: -90%;
+    }
+  }
+  @keyframes indeterminate {
+    0% {
+      left: -35%;
+      right: 100%;
+    }
+    60% {
+      left: 100%;
+      right: -90%;
+    }
+    100% {
+      left: 100%;
+      right: -90%;
+    }
+  }
+  @-webkit-keyframes indeterminate-short {
+    0% {
+      left: -200%;
+      right: 100%;
+    }
+    60% {
+      left: 107%;
+      right: -8%;
+    }
+    100% {
+      left: 107%;
+      right: -8%;
+    }
+  }
+  @keyframes indeterminate-short {
+    0% {
+      left: -200%;
+      right: 100%;
+    }
+    60% {
+      left: 107%;
+      right: -8%;
+    }
+    100% {
+      left: 107%;
+      right: -8%;
+    }
+  }
+  /* Pagination */
+  .pagination {
+    width: 90%;
+    position: fixed;
+    bottom: 3%;
+  }
+  .pagination ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+  }
+  .pagination ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    padding: 7px 7px;
+    text-decoration: none;
+    background-color: #eee;
+    color: black;
+    border-radius: 50%;
+  }
+  .pagination ul li a:hover {
+    background-color: #e2e2e2;
+  }
+  
+  /* banned tsudent */
+  
+  .bannedcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .banneddiv {
+    text-align: center;
+    padding: 20px; /* Adjust the padding to create space around the content */
+    background-color: #f1f1f1; /* Optional: Add a background color to the content area */
+    width: 40%;
+    position: relative;
+    top: -100px;
+  }
+  #github {
+    color: #171515;
+  }
+  #linkedin {
+    color: #0077b5;
+  }
+  #twitter {
+    color: #4294ff;
+  }
+  #facebook {
+    color: #4267b2;
+  }
+  .card {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .card h1 {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .card p {
+    color: #555;
+    font-size: 16px;
+  }
+  .container404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card404{
+    position: relative;
+    background-color: #919191;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px; /* Adjust the padding to create space around the content */
+    background-color: #f1f1f1;
+  }

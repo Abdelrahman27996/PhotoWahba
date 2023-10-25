@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style sheets  -->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/registration/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="progress" id="PreLoaderBar">
+      <div class="indeterminate"></div>
+    </div>
+    <main>
+      <div class="container">
+        <div class="title">
+          <p style="color: red; text-align: center; margin-bottom: 10px">
+           
+          </p>
+          <h1>Log in</h1>
+        </div>
+        <form id="form" action="/login" method="POST" >
+          <div>
+            <label for="username">Username : </label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="pass">
+            <label for="password">Password : </label>
+            <input type="password" id="password" name="password" />
+            <i class="fa-regular fa-eye eye" id="eye"></i>
+            <i class="fa-regular fa-eye-slash eye" id="closedEye"></i>
+          </div>
+          <p style="color: red" id="error"></p>
+          <button type="submit" class="btn sign-in">Sign in</button>
+          <a href="/signup" class="sign-up"> Don't have an account ? Sign up</a>
+        </form>
+      </div>
+    </main>
+    <!-- eye  -->
+    <script src="./js/registration/eye.js"></script>
+    <!-- form validation and sending to backend -->
+    <script type="module">
+      // import { validateForm } from "./js/formValidation.js";
+      // import sendCode from "./js/sendErrorEmail.js";
+
+      // const form = document.getElementById("form");
+      // const error = document.getElementById("error");
+
+      // form.addEventListener("submit", async (e) => {
+      //   e.preventDefault();
+
+      //   const errorMsg = validateForm(form);
+      //   if (errorMsg) return (error.innerHTML = errorMsg);
+
+      //   try {
+      //     const res = await fetch("/login", {
+      //       method: "POST",
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //       },
+      //       body: JSON.stringify({
+      //         username: document.getElementById("username").value,
+      //         Password: document.getElementById("password").value,
+      //       }),
+      //     });
+
+      //     const data = await res.json();
+
+      //     if (data.errMsg) error.innerHTML = data.errMsg;
+      //     else if (data.user)
+      //       location.assign(``);
+      //     else {
+      //       location.assign("/error");
+      //       sendCode(1);
+      //     }
+      //   } catch (err) {
+      //     console.log(err);
+      //     location.assign("/error");
+      //     sendCode(2);
+      //   }
+      // });
+    </script>
+    <!-- processing bar -->
+    <script>
+      document.onreadystatechange = function () {
+        if (document.readyState === "complete") {
+          console.log(document.readyState);
+          document.getElementById("PreLoaderBar").style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
