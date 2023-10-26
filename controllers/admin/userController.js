@@ -21,7 +21,6 @@ exports.viewUsers = (req, res) => {
         console.error("Error querying the database: " + err);
         return res.status(500).send("Database error");
       }
-
       res.render("users", { rows });
     });
   });
@@ -53,8 +52,9 @@ exports.searchUsers = (req, res) => {
 };
 
 exports.createUser = (req, res) => {
+  console.log('helloooo');
   const { first_name, last_name, email, phone } = req.body;
-  if (!first_name || !last_name) {
+  if (!first_name || !last_name || !email) {
     return res.status(400).send("Invalid request: first_name and last_name are required.");
   }
 
@@ -65,8 +65,8 @@ exports.createUser = (req, res) => {
     }
 
     connection.query(
-      "INSERT INTO user (first_name, last_name) VALUES (?, ?)",
-      [first_name, last_name],
+      "INSERT INTO user (first_name, last_name, email,phone) VALUES (?, ?,?,?)",
+      [first_name, last_name, email,phone],
       (err, rows) => {
         connection.release();
 

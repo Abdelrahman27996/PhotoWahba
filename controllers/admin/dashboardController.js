@@ -13,6 +13,6 @@ const pool = mysql.createPool({
 
 
 exports.viewDashboard= (req, res)=>{
-    res.render("admin/dashboard");
+    res.render("dashboard");
 }
 

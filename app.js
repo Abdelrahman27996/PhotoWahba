@@ -58,9 +58,8 @@ app.use(
   })
 );
 
-
-app.use(registrationRouter);
 app.use(homeRouter);
+app.use(registrationRouter);
 app.use('/admin', dashboardRouter); 
 app.use('/admin/users', userRouter);
 
