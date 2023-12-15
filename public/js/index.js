@@ -7,7 +7,7 @@
 */
 (function() {
     "use strict";
-  
+
     /**
      * Easy selector helper function
      */
@@ -19,7 +19,7 @@
         return document.querySelector(el)
       }
     }
-  
+
     /**
      * Easy event listener function
      */
@@ -33,14 +33,14 @@
         }
       }
     }
-  
+
     /**
      * Easy on scroll event listener 
      */
     const onscroll = (el, listener) => {
       el.addEventListener('scroll', listener)
     }
-  
+
     /**
      * Navbar links active state on scroll
      */
@@ -60,21 +60,21 @@
     }
     window.addEventListener('load', navbarlinksActive)
     onscroll(document, navbarlinksActive)
-  
+
     /**
      * Scrolls to an element with header offset
      */
     const scrollto = (el) => {
       let header = select('#header')
       let offset = header.offsetHeight
-  
+
       let elementPos = select(el).offsetTop
       window.scrollTo({
         top: elementPos - offset,
         behavior: 'smooth'
       })
     }
-  
+
     /**
      * Back to top button
      */
@@ -90,7 +90,7 @@
       window.addEventListener('load', toggleBacktotop)
       onscroll(document, toggleBacktotop)
     }
-  
+
     /**
      * Mobile nav toggle
      */
@@ -99,7 +99,7 @@
       this.classList.toggle('bi-list')
       this.classList.toggle('bi-x')
     })
-  
+
     /**
      * Mobile nav dropdowns activate
      */
@@ -109,14 +109,14 @@
         this.nextElementSibling.classList.toggle('dropdown-active')
       }
     }, true)
-  
+
     /**
      * Scrool with ofset on links with a class name .scrollto
      */
     on('click', '.scrollto', function(e) {
       if (select(this.hash)) {
         e.preventDefault()
-  
+
         let navbar = select('#navbar')
         if (navbar.classList.contains('navbar-mobile')) {
           navbar.classList.remove('navbar-mobile')
@@ -127,7 +127,7 @@
         scrollto(this.hash)
       }
     }, true)
-  
+
     /**
      * Scroll with ofset on page load with hash links in the url
      */
@@ -138,7 +138,7 @@
         }
       }
     });
-  
+
     /**
      * Porfolio isotope and filter
      */
@@ -149,16 +149,16 @@
           itemSelector: '.portfolio-item',
           layoutMode: 'fitRows'
         });
-  
+
         let portfolioFilters = select('#portfolio-flters li', true);
-  
+
         on('click', '#portfolio-flters li', function(e) {
           e.preventDefault();
           portfolioFilters.forEach(function(el) {
             el.classList.remove('filter-active');
           });
           this.classList.add('filter-active');
-  
+
           portfolioIsotope.arrange({
             filter: this.getAttribute('data-filter')
           });
@@ -167,16 +167,16 @@
           });
         }, true);
       }
-  
+
     });
-  
+
     /**
      * Initiate portfolio lightbox 
      */
     const portfolioLightbox = GLightbox({
       selector: '.portfolio-lightbox'
     });
-  
+
     /**
      * Portfolio details slider
      */
@@ -193,7 +193,7 @@
         clickable: true
       }
     });
-  
+
     /**
      * Clients Slider
      */
@@ -229,7 +229,7 @@
         }
       }
     });
-  
+
     /**
      * Animation on scroll
      */
@@ -241,5 +241,5 @@
         mirror: false
       });
     });
-  
+
   })()
