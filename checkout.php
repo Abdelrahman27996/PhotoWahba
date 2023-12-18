@@ -18,10 +18,7 @@ $total = 0;
                 <input type="hidden" name="paid" value="0">
                 <div class="row row-col-1 justify-content-center">
                     <div class="col-6">
-                        <div class="form-group col address-holder">
-                            <label for="" class="control-label">Delivery Address</label>
-                            <textarea id="" cols="30" rows="3" name="delivery_address" class="form-control" style="resize:none"><?php echo $_settings->userdata('default_delivery_address') ?></textarea>
-                        </div>
+                       
                         <div class="col">
                             <span><h4><b>Total:</b> <?php echo number_format($total) ?></h4></span>
                         </div>
@@ -30,7 +27,7 @@ $total = 0;
                         <h4 class="text-muted">Payment Method</h4>
                             <div class="d-flex w-100 justify-content-between">
                                 <button class="btn btn-flat btn-dark">Cash on Delivery</button>
-                                <span id="paypal-button"></span>
+                               
                             </div>
                         </div>
                     </div>
