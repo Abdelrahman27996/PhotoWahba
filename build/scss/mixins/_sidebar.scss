@@ -6,14 +6,14 @@
 @mixin sidebar-color($color) {
   .nav-sidebar > .nav-item {
     > .nav-link.active {
-      background-color: $color;
+      background-color: gray;
       color: color-yiq($color);
     }
   }
 
   .nav-sidebar.nav-legacy > .nav-item {
     > .nav-link.active {
-      border-color: $color;
+      border-color: gray;
     }
   }
 }

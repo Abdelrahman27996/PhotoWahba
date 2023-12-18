@@ -14,7 +14,7 @@ $brands = isset($_GET['b']) ? json_decode(urldecode($_GET['b'])) : array();
     <div class="container">
     <div class="row">
         <div class="col-lg-2 px-1 border-right text-sm position-sticky ">
-            <h4><b>Brands</b></h4>
+            <h4><b>Options</b></h4>
             <ul class="list-group">
                 <a href="" class="list-group-item list-group-item-action">
                     <div class="icheck-primary d-inline">
